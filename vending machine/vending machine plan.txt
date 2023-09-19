@@ -1,0 +1,21 @@
+vending machine plan 
+
+1) select item
+2) enter money 
+3) get item 
+4) return change
+
+create a list of items with prices and unique codes 
+calculate the money entered 
+or card payment 
+give change
+
+extras:
+recipt 
+exit code if time taken is too long 
+subtract stock 
+create visual vending machine 
+
+
+
+
