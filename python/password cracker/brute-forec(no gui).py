@@ -4,11 +4,11 @@ import time
 #character sets
 basic = "abcdefghijklmnopqrstuvwxyz0123456789"
 advanced = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!£$%^&*()|/?,.<>;:'@#~[}]{+=-_`¬"
-
+#advanced not running 
 choice = input("would you like to use Basic character set (faster) or Advanced character set (slower): ")
 if choice == "basic" or "B" or "Basic":
     allchar = list(basic)
-elif choice == "advanced" or "A" or "Advanced":
+else :
     allchar = list(advanced)
 pwd = input("enter a password : ")
 
