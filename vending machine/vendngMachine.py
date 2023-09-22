@@ -42,6 +42,16 @@ def vendingMachine(item_data, run, item):
       else:
          print("THE PRODUCT ID IS WRONG!")
       #run = False  
+      if buyItem == 0:
+         item_name = "water"
+      elif buyItem == 1:
+         item_name = "pepsi"
+      elif buyItem == 2:
+         item_name = "fanta"
+      elif buyItem == 3:
+         item_name = "coke"
+      elif buyItem == 4:   
+         item_name = "sprite"
       #cost
       cost = (sumItem(item))
       print("your total is: £",cost)
@@ -56,22 +66,29 @@ def vendingMachine(item_data, run, item):
             if total >= cost :
                change = total - cost 
                print("£",change," change due")
+               print ("please collect your",item_name)
                run2 = False
             else:
                cost = cost - total 
                print("£",cost," payment due")
-
       elif paymethod == "card":
          run3 = True
+         retry = "y"
          while run3 == True:
           cardwork = random.randint(1,9)
           if cardwork >= 5:
             print("payment successful")
-            print("please collect your ",item)
+            print("please collect your ",item_name)
             run3 = False
             run = False
-          else:
-            print("payment unsuccessful please try again")
+          elif cardwork < 5:
+            retry = input("payment unsuccessful please try again y/n: ")
+            if retry == "n":
+               print("payment aborted")
+               run3 = False
+            else:
+               run3 = True
+       
    
 #error outputting item name after payment completed 
 #test cash payment method
