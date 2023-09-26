@@ -61,16 +61,20 @@ def vendingMachine(item_data, run, item):
          total = 0
          run2 = True
          while run2 == True:
-            coin = float(input("value of coin entered"))
+            coin = float(input("value of coin entered: £"))
             total = total + coin
+            total = round(total,2)
             if total >= cost :
                change = total - cost 
-               print("£",change," change due")
+               change = round(change,2)
+               print("£{:0.2f}.".format(change), "change due")
                print ("please collect your",item_name)
                run2 = False
             else:
                cost = cost - total 
-               print("£",cost," payment due")
+               cost = round(cost,2)
+               total = cost
+               print("£{:0.2f}.".format(cost)," payment due")
       elif paymethod == "card":
          run3 = True
          retry = "y"
@@ -90,9 +94,7 @@ def vendingMachine(item_data, run, item):
                run3 = True
        
    
-#error outputting item name after payment completed 
-#test cash payment method
-
+#cash logic error returning change
 
 #
 def sumItem(item):
