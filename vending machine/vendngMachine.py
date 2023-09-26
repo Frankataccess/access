@@ -24,6 +24,7 @@ item_data = [
    },
 ]
 
+
 run = True
 price=""
 reciept = ""
@@ -35,22 +36,24 @@ for i in range(len(item_data)):
 
 def vendingMachine(item_data, run, item):
    while run:
-      buyItem = int(
+      item_code_input = int(
          input("\n\nEnter the item code for the item you want to buy: "))
-      if buyItem < len(item_data):
-         item.append(item_data[buyItem])
+      if item_code_input < len(item_data):
+         item.append(item_data[item_code_input])
       else:
          print("THE PRODUCT ID IS WRONG!")
       #run = False  
-      if buyItem == 0:
+
+      
+      if item_code_input == 0:
          item_name = "water"
-      elif buyItem == 1:
+      elif item_code_input == 1:
          item_name = "pepsi"
-      elif buyItem == 2:
+      elif item_code_input == 2:
          item_name = "fanta"
-      elif buyItem == 3:
+      elif item_code_input == 3:
          item_name = "coke"
-      elif buyItem == 4:   
+      elif item_code_input == 4:   
          item_name = "sprite"
       #cost
       cost = (sumItem(item))
@@ -62,6 +65,7 @@ def vendingMachine(item_data, run, item):
          run2 = True
          while run2 == True:
             coin = float(input("value of coin entered: £"))
+            total  = 0
             total = total + coin
             total = round(total,2)
             if total >= cost :
@@ -73,7 +77,7 @@ def vendingMachine(item_data, run, item):
             else:
                cost = cost - total 
                cost = round(cost,2)
-               total = cost
+                
                print("£{:0.2f}.".format(cost)," payment due")
       elif paymethod == "card":
          run3 = True
