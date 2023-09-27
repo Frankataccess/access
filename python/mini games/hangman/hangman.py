@@ -10,3 +10,19 @@ while lives>=1 and not wordGuessed :
     print(" ".join(guessed_word))
 
     user_guess = input("guess a letter/word!(" + str(lives) + \n "lives remaining )\n")
+
+    letter_in_word = False
+    for i in range(len(word)):
+        if user_guess == word[i]:
+            guessed_word[i] = user_guess
+            letter_in_word = True 
+
+    if letter_in_word == False :
+        lives -= 1
+
+    if guessed_word == word:
+        print(" ".join(guessed_word))
+        print("you have guessed the word correctly")
+        wordGuessed=True
+    elif lives > 1:
+        print("you have failed to guess the word correctly :(")
