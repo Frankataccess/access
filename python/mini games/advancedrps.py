@@ -4,17 +4,15 @@ i = 0
 player_wins = 0
 computer_wins = 0
 
-
 dificulty = input("select difficulty: E for easy, N for normal or H for hard: ")
 rounds = input("how many rounds would you like to go for: ")
 rounds = int(rounds)
-dificlty = dificulty.upper()
 
 
-if dificulty == "E":
-    while i < rounds:
+while i < rounds:
+    choice = input("Enter r for rock, p for paper or s for scissors: ")
+    if dificulty == "E":
         computerChoice = random.randint(0,2)
-        choice = input("Enter r for rock, p for paper or s for scissors: ")
         if choice == "r":
             print("The computer chose scissors, You win!")
             i=i+1
@@ -27,11 +25,11 @@ if dificulty == "E":
             print("The computer chose paper, You win!")
             i=i+1
             player_wins = player_wins +1
-    print("you won",player_wins,"times")
-elif dificulty == "N":
-    while i < rounds:
+        print("you won",player_wins,"times")
+
+    elif dificulty == "N":
         computerChoice = random.randint(0,2)
-        choice = input("Enter r for rock, p for paper or s for scissors: ")
+    
 
         if choice == "r":
             if computerChoice == 0:
@@ -73,14 +71,8 @@ elif dificulty == "N":
 
         else:
            print("error")
-       
-    
-    print("You won ",player_wins," times and lost ",computer_wins)
-
-elif dificulty == "H":
-    while i < rounds:
+    elif dificulty == "H":
         computerChoice = random.randint(0,2)
-        choice = input("Enter r for rock, p for paper or s for scissors: ")
         if choice == "r":
             print("The computer chose paper, You Lose")
             i=i+1
@@ -97,5 +89,4 @@ elif dificulty == "H":
 
 else:
     print("error")
-  
-
+        
