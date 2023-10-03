@@ -87,6 +87,6 @@ while i < rounds:
             computer_wins = computer_wins +1
     print("you lost",computer_wins,"times")
 
-else:
-    print("error")
+
+print("error")
         
