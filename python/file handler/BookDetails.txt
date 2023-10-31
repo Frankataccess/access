@@ -1,0 +1,5 @@
+1451648537,Steve Jobs,Walter Isaacson,Simon & Schuster,1/10/2011,627,9.99
+0060521996,The Innovator's Dilemma,Clayton M. Christensen,Harper Paperbacks,7/1/2003,286,10.99
+0316491977,The soul of a new machine,Tracy Kidder,Back Bay Books,1/6/2000,293,12.99
+1591841399,Andy Grove,Richard S.Tedlow,Portfolio Hardcover,6/11/2006,576,19.99
+0393347818,The New New Thing,Michael Lewis,W. W. Norton Company,6/1/2014,349,14.99
