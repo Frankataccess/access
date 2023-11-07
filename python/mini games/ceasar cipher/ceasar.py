@@ -25,6 +25,6 @@ def rot13(string):
         ciphertext += shift(letter)
     return ciphertext
 
-plaintext = "i love computing"
+plaintext = input("enter a password: ")
 ciphertext = rot13(plaintext)
 print(ciphertext)
