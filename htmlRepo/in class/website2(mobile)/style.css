@@ -1,0 +1,75 @@
+@media screen and (min-width: 480px){
+   
+   body{
+    display: grid;
+    grid-template-columns: repeat(12,minmax(auto,1fr));
+   }
+   
+    .flex {
+        grid-column: span 12;
+        border: solid black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap ;
+        height: 500px;
+
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .item{
+        flex-basis: 100px;
+        height: 100px;
+    }
+
+    .one{
+        background-color: blue;
+      
+    }
+
+    .two{
+        background-color: red;
+  
+    }
+
+    .three{
+        background-color: green;
+
+    }
+
+    .four{
+        background-color: yellow;
+
+    }
+}
+.grid{
+    display: grid;
+    border: solid black;
+    grid-template-columns:repeat(12, minmax(auto,1fr));
+    gap: 10px;
+    padding:10px;
+}
+
+.g-item{
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    grid-column:span  6;
+}
+
+@media  screen and (min-width:768px) {
+    body{
+        background-color: grey;
+    }
+    .g-item{
+        width: 100%;
+        aspect-ratio: 1/1;
+    
+        grid-column:span  3;
+}
+
+@media screen and (min-width: 1024px){
+    body{
+        background-color: black;
+    }
+} }
